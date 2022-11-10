@@ -179,10 +179,11 @@ public class Calculation {
 			public void actionPerformed(ActionEvent e) {
 				double a=Double.parseDouble(textField.getText());
 				double fact=1;
-				while(a!=0) {
+				if(a==(int)a) {
+				while(a>0) {
 					fact=fact*a;
 					a--;
-				}
+				}}
 				textField.setText("");
 				textField.setText(textField.getText()+fact);
 			}
