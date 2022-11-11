@@ -57,7 +57,7 @@ public class Advanced extends JFrame {
 				textField.setText(number);
 				}
 		});
-		btnParenthesisOpen.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
+		btnParenthesisOpen.setFont(new Font("Dialog", Font.PLAIN, 20));
 		btnParenthesisOpen.setBounds(10, 361, 85, 62);
 		contentPane.add(btnParenthesisOpen);
 		
@@ -68,7 +68,7 @@ public class Advanced extends JFrame {
 				textField.setText(number);
 			}
 		});
-		btnParenthesisClose.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
+		btnParenthesisClose.setFont(new Font("Dialog", Font.PLAIN, 20));
 		btnParenthesisClose.setBounds(10, 433, 85, 62);
 		contentPane.add(btnParenthesisClose);
 		
@@ -79,7 +79,7 @@ public class Advanced extends JFrame {
 				textField.setText(number);
 			}
 		});
-		btnPower.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
+		btnPower.setFont(new Font("Dialog", Font.PLAIN, 20));
 		btnPower.setBounds(10, 289, 85, 62);
 		contentPane.add(btnPower);
 		
@@ -236,7 +236,7 @@ public class Advanced extends JFrame {
 				textField.setText(number);
 			}
 		});
-		btnDot.setFont(new Font("Segoe UI Black", Font.BOLD, 20));
+		btnDot.setFont(new Font("Dialog", Font.PLAIN, 26));
 		btnDot.setBounds(10, 505, 85, 62);
 		contentPane.add(btnDot);
 		
@@ -312,7 +312,7 @@ public class Advanced extends JFrame {
 		        }}
 			}
 		});
-		btnEqual.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
+		btnEqual.setFont(new Font("Dialog", Font.PLAIN, 20));
 		btnEqual.setBounds(295, 505, 181, 62);
 		contentPane.add(btnEqual);
 		
@@ -323,7 +323,7 @@ public class Advanced extends JFrame {
 				textField.setText(number);	
 			}
 		});
-		btnDivide.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
+		btnDivide.setFont(new Font("Dialog", Font.PLAIN, 20));
 		btnDivide.setBounds(391, 433, 85, 62);
 		contentPane.add(btnDivide);
 		
@@ -334,7 +334,7 @@ public class Advanced extends JFrame {
 				textField.setText(number);
 				}
 		});
-		btnMultiply.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
+		btnMultiply.setFont(new Font("Dialog", Font.PLAIN, 20));
 		btnMultiply.setBounds(391, 361, 85, 62);
 		contentPane.add(btnMultiply);
 		
@@ -345,7 +345,7 @@ public class Advanced extends JFrame {
 				textField.setText(number);
 				}
 		});
-		btnSubtract.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
+		btnSubtract.setFont(new Font("Dialog", Font.PLAIN, 20));
 		btnSubtract.setBounds(391, 289, 85, 62);
 		contentPane.add(btnSubtract);
 		
@@ -356,7 +356,7 @@ public class Advanced extends JFrame {
 				textField.setText(number);
 			}
 		});
-		btnAddition.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
+		btnAddition.setFont(new Font("Dialog", Font.PLAIN, 20));
 		btnAddition.setBounds(391, 217, 85, 62);
 		contentPane.add(btnAddition);
 		
@@ -385,6 +385,9 @@ public class Advanced extends JFrame {
 		JButton btnConversion = new JButton("Conversion");
 		btnConversion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+					conversion obj=new conversion();
+					 obj.setVisible(true);
 			}
 		});
 		btnConversion.setBounds(247, 151, 229, 56);
