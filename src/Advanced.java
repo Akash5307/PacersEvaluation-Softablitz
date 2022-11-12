@@ -273,11 +273,14 @@ public class Advanced extends JFrame {
 		          }
 		          try{
 		        	  
-		        	  statement.executeUpdate("DELETE FROM History WHERE id=10;");
-		        	  statement.executeUpdate("UPDATE History SET id=id+1 WHERE id<10;");
+		        	  statement.executeUpdate("UPDATE History SET id=id+1 WHERE id<=10;");
 		        	  statement.executeUpdate(tosend);
+		        	  statement.executeUpdate("DELETE FROM History WHERE id=11;");
 		          }
-		          catch(Exception exp){}
+		          catch(Exception exp){
+		        	  statement.executeUpdate("UPDATE History SET id=id-1 WHERE id<12;");
+		        	  statement.executeUpdate("DELETE FROM History WHERE id>=11;");
+		          }
 		          
 
 //		          ResultSet rs = statement.executeQuery("select * from History");

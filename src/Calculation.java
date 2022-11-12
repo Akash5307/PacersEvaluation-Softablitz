@@ -67,9 +67,12 @@ public class Calculation {
 		JButton btnExponent = new JButton("e^x");
 		btnExponent.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				double a=Math.exp(Double.parseDouble(textField.getText()));
+				try{double a=Math.exp(Double.parseDouble(textField.getText()));
 				textField.setText("");
-				textField.setText(textField.getText()+a);
+				textField.setText(textField.getText()+a);}
+				catch(Exception exp){
+					textField.setText("First Enter number");
+				}
 			}
 		});
 		btnExponent.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
@@ -80,9 +83,12 @@ public class Calculation {
 		btnSin.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
 		btnSin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				double a=Math.sin(Double.parseDouble(textField.getText()));
+				try{double a=Math.sin(Double.parseDouble(textField.getText()));
 				textField.setText("");
-				textField.setText(textField.getText()+a);
+				textField.setText(textField.getText()+a);}
+				catch(Exception exp){
+					textField.setText("First Enter number");
+				}
 			}
 		});
 		btnSin.setBounds(200, 187, 85, 62);
@@ -91,9 +97,12 @@ public class Calculation {
 		JButton btnR = new JButton("\u221A");
 		btnR.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				double a=Math.sqrt(Double.parseDouble(textField.getText()));
+				try{double a=Math.sqrt(Double.parseDouble(textField.getText()));
 				textField.setText("");
-				textField.setText(textField.getText()+a);
+				textField.setText(textField.getText()+a);}
+				catch(Exception exp){
+					textField.setText("First Enter number");
+				}
 			}
 		});
 		btnR.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
@@ -103,9 +112,12 @@ public class Calculation {
 		JButton btnCos = new JButton("Cos");
 		btnCos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				double a=Math.cos(Double.parseDouble(textField.getText()));
+				try{double a=Math.cos(Double.parseDouble(textField.getText()));
 				textField.setText("");
-				textField.setText(textField.getText()+a);
+				textField.setText(textField.getText()+a);}
+				catch(Exception exp){
+					textField.setText("First Enter number");
+				}
 			}
 		});
 		btnCos.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
@@ -115,9 +127,11 @@ public class Calculation {
 		JButton btnTan = new JButton("Tan");
 		btnTan.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				double a=Math.tan(Double.parseDouble(textField.getText()));
+				try{double a=Math.tan(Double.parseDouble(textField.getText()));
 				textField.setText("");
-				textField.setText(textField.getText()+a);
+				textField.setText(textField.getText()+a);}catch(Exception exp){
+					textField.setText("First Enter number");
+				}
 			}
 		});
 		btnTan.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
@@ -128,10 +142,13 @@ public class Calculation {
 		btnCube.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
 		btnCube.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				double a=(Double.parseDouble(textField.getText()));
+				try{double a=(Double.parseDouble(textField.getText()));
 				a=a*a*a;
 				textField.setText("");
-				textField.setText(textField.getText()+a);
+				textField.setText(textField.getText()+a);}
+				catch(Exception exp){
+					textField.setText("First Enter number");
+				}
 			}
 		});
 		btnCube.setBounds(10, 403, 85, 62);
@@ -140,9 +157,12 @@ public class Calculation {
 		JButton btnReciprocal = new JButton("1/x");
 		btnReciprocal.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				double a=1/(Double.parseDouble(textField.getText()));
+				try{double a=1/(Double.parseDouble(textField.getText()));
 				textField.setText("");
-				textField.setText(textField.getText()+a);
+				textField.setText(textField.getText()+a);}
+				catch(Exception exp){
+					textField.setText("First Enter number");
+				}
 			}
 		});
 		btnReciprocal.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
@@ -164,10 +184,13 @@ public class Calculation {
 		JButton btnSquare = new JButton("X^2");
 		btnSquare.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				double a=Double.parseDouble(textField.getText());
+				try{double a=Double.parseDouble(textField.getText());
 				a*=a;
 				textField.setText("");
-				textField.setText(textField.getText()+a);
+				textField.setText(textField.getText()+a);}
+				catch(Exception exp){
+					textField.setText("First Enter number");
+				}
 			}
 		});
 		btnSquare.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
@@ -177,15 +200,21 @@ public class Calculation {
 		JButton btnFactorial = new JButton("n!");
 		btnFactorial.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				double a=Double.parseDouble(textField.getText());
+				try{double a=Double.parseDouble(textField.getText());
 				double fact=1;
 				if(a==(int)a) {
 				while(a>0) {
 					fact=fact*a;
 					a--;
-				}}
+				}
 				textField.setText("");
-				textField.setText(textField.getText()+fact);
+				textField.setText(textField.getText()+fact);}
+				else {
+					textField.setText("Enter valid interger");
+				}}
+				catch(Exception exp){
+					textField.setText("First Enter number");
+				}
 			}
 		});
 		btnFactorial.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
@@ -195,9 +224,12 @@ public class Calculation {
 		JButton btnplusminus = new JButton("+/-");
 		btnplusminus.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				double a=Double.parseDouble(String.valueOf(textField.getText()));
+				try{double a=Double.parseDouble(String.valueOf(textField.getText()));
 				a=a*(-1);
-				textField.setText(String.valueOf(a));
+				textField.setText(String.valueOf(a));}
+				catch(Exception exp){
+					textField.setText("First Enter number");
+				}
 			}
 		});
 		btnplusminus.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
@@ -207,9 +239,12 @@ public class Calculation {
 		JButton btnLog = new JButton("Log");
 		btnLog.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				double a=Math.log(Double.parseDouble(textField.getText()));
+				try{double a=Math.log(Double.parseDouble(textField.getText()));
 				textField.setText("");
-				textField.setText(textField.getText()+a);
+				textField.setText(textField.getText()+a);}
+				catch(Exception exp){
+					textField.setText("First Enter number");
+				}
 			}
 		});
 		btnLog.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
@@ -264,9 +299,12 @@ public class Calculation {
 		JButton btnSinh = new JButton("Sinh");
 		btnSinh.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				double a=Math.sinh(Double.parseDouble(textField.getText()));
+				try{double a=Math.sinh(Double.parseDouble(textField.getText()));
 				textField.setText("");
-				textField.setText(textField.getText()+a);
+				textField.setText(textField.getText()+a);}
+				catch(Exception exp){
+					textField.setText("First Enter number");
+				}
 			}
 		});
 		btnSinh.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
@@ -330,9 +368,12 @@ public class Calculation {
 		JButton btnCosh = new JButton("Cosh");
 		btnCosh.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				double a=Math.cosh(Double.parseDouble(textField.getText()));
+				try{double a=Math.cosh(Double.parseDouble(textField.getText()));
 				textField.setText("");
-				textField.setText(textField.getText()+a);
+				textField.setText(textField.getText()+a);}
+				catch(Exception exp){
+					textField.setText("First Enter number");
+				}
 			}
 		});
 		btnCosh.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
@@ -403,9 +444,12 @@ public class Calculation {
 		JButton btnTanh = new JButton("Tanh");
 		btnTanh.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				double a=Math.tanh(Double.parseDouble(textField.getText()));
+				try{double a=Math.tanh(Double.parseDouble(textField.getText()));
 				textField.setText("");
-				textField.setText(textField.getText()+a);
+				textField.setText(textField.getText()+a);}
+				catch(Exception exp){
+					textField.setText("First Enter number");
+				}
 			}
 		});
 		btnTanh.setFont(new Font("Segoe UI Light", Font.BOLD, 15));
